@@ -17,5 +17,19 @@ $(document).ready(function(){
 	$(firstRow).append(firstCol);
 	//row dentro de la columna
 	$(firstSection).append(firstRow);
-	
+	//Card
+	var card = document.createElement("div");
+	$(card).addClass("card cyan").height("300px");
+	$(firstCol).append(card);
+	var textcard = document.createElement("div");
+	$(textcard).addClass("card-content white-text");
+	$(card).append(textcard);
+	//Contenido tarjeta
+	var contInput = document.createElement("div");
+	$(contInput).addClass("input-field col s12");
+	$(textcard).append(contInput);
+	//Textarea
+	$(contInput).append("<textarea id='textarea' class='materialize-textarea'></textarea>");
+	//Label
+	$("textarea").after("<label for='textarea'>Ingresa Una Tarea</label");
 });
