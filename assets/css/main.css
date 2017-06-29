@@ -1,1 +1,9 @@
-main.css
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.amber h5{
+	color: black;
+	font-weight: 800;
+}
