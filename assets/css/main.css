@@ -7,3 +7,12 @@ body{
 	color: black;
 	font-weight: 800;
 }
+
+.amber div{
+	padding: 5px 10%;
+}
+
+section{
+	height: 600px;
+	width: 100%;
+}
