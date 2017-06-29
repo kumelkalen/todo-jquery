@@ -32,4 +32,21 @@ $(document).ready(function(){
 	$(contInput).append("<textarea id='textarea' class='materialize-textarea'></textarea>");
 	//Label
 	$("textarea").after("<label for='textarea'>Ingresa Una Tarea</label");
+	$("label").after("<p>To Do Items:</p>");
+	$("p").after("<ul></ul>");
+	//Función ingresar tarea (intento)
+	var textarea = document.getElementById("textarea");
+	textarea.addEventListener("keypress",function (e) {
+        if (e.keyCode == 13) {
+           var li = document.createElement("li");
+           var inputValue = document.getElementById("textarea").value;
+           var textNode = document.createTextNode(inputValue);
+           li.appendChild(textNode);
+           if (inputValue === '') {
+    		alert("Porfavor escribe una tarea");
+    		}else{
+    			$("ul").append(li);
+    		}
+    		
+        });
 });

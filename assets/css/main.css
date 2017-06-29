@@ -2,7 +2,7 @@ body{
 	margin: 0;
 	padding: 0;
 }
-
+/* Nav */
 .amber h5{
 	color: black;
 	font-weight: 800;
@@ -12,7 +12,10 @@ body{
 	padding: 5px 10%;
 }
 
+/* Section */
 section{
 	height: 600px;
 	width: 100%;
 }
+
+
