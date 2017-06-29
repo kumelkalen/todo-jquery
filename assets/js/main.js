@@ -37,10 +37,22 @@ $(document).ready(function(){
 	$(".button").after("<p>To Do Items:</p>");
 	$("p").after("<ul></ul>");
 	//Función ingresar tarea (intento)
+	/*var list = document.getElementsByTagName("li"); //Llamamos a todos los elementos li
+	for (i = 0; i <list.length; i++) {
+		var span = document.createElement()
+
+	}
+	*/
+
+
 	$("#btn").click(function(e){
 		e.preventDefault();
 		var li = document.createElement("li");
-		$(li).append("<i class='material-icons x'>close</i>");
+
+		//Check
+		$(li).append("<input class='check' type='checkbox' />");
+		//X icon
+		$(li).append("<i class='material-icons x close'>close</i>");
 		var inputValue = document.getElementById("textarea").value;
 		var textNode = document.createTextNode(inputValue);
 		li.appendChild(textNode);
@@ -49,7 +61,13 @@ $(document).ready(function(){
     		}else{
     			$("ul").append(li);
     		}
-    		
+    		document.getElementById("textarea").value="";
+    	/*var close = $(".close");
+    	for(var i=0; i<close.length; i++){
+    		close[i].onclick = function(){
+    			$(li).remove(".close");
+    		}
+    	}*/
 	})
 
 	/*var textarea = document.getElementById("textarea");

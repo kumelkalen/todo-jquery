@@ -35,3 +35,11 @@ i.x{
 	position: relative;
 	left: 50%;	
 }
+
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+	position: absolute;
+	left: 20px; 
+	opacity: 1; 
+	width: 20px;
+	height: 20px;
+}
