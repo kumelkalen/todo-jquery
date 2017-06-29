@@ -62,12 +62,14 @@ $(document).ready(function(){
     			$("ul").append(li);
     		}
     		document.getElementById("textarea").value="";
-    	/*var close = $(".close");
+    		//Funcionalidad del x icon
+    	var close = document.getElementsByClassName("close");//Llamamos a los elementos con esa clase
     	for(var i=0; i<close.length; i++){
-    		close[i].onclick = function(){
-    			$(li).remove(".close");
+    		close[i].onclick = function(){//Cada elemento tendrá una función
+    			var liClose = this.parentElement;//Guardamos al elemento padre
+    			$(liClose).remove();//Eliminamos el elemento
     		}
-    	}*/
+    	}
 	})
 
 	/*var textarea = document.getElementById("textarea");
