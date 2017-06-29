@@ -12,7 +12,7 @@ $(document).ready(function(){
 	$(firstRow).addClass("row");
 	//Columna
 	var firstCol = document.createElement("div");
-	$(firstCol).addClass("col s10 m5");
+	$(firstCol).addClass("col s10 offset-m3 m6 center");
 	//columna dentro del row
 	$(firstRow).append(firstCol);
 	//row dentro de la columna
@@ -29,13 +29,30 @@ $(document).ready(function(){
 	$(contInput).addClass("input-field col s12");
 	$(textcard).append(contInput);
 	//Textarea
-	$(contInput).append("<textarea id='textarea' class='materialize-textarea'></textarea>");
+	$(contInput).append("<textarea id='textarea' class='materialize-textarea s3'></textarea>");
 	//Label
 	$("textarea").after("<label for='textarea'>Ingresa Una Tarea</label");
-	$("label").after("<p>To Do Items:</p>");
+	$('textarea').trigger('autoresize');
+	$("label").after("<a id='btn' class='btn-floating btn-large waves-effect waves-light red button'><i class='material-icons'>add</i></a>");
+	$(".button").after("<p>To Do Items:</p>");
 	$("p").after("<ul></ul>");
 	//Función ingresar tarea (intento)
-	var textarea = document.getElementById("textarea");
+	$("#btn").click(function(e){
+		e.preventDefault();
+		var li = document.createElement("li");
+		$(li).append("<i class='material-icons x'>close</i>");
+		var inputValue = document.getElementById("textarea").value;
+		var textNode = document.createTextNode(inputValue);
+		li.appendChild(textNode);
+		if (inputValue === '') {
+    		alert("Porfavor escribe una tarea");
+    		}else{
+    			$("ul").append(li);
+    		}
+    		
+	})
+
+	/*var textarea = document.getElementById("textarea");
 	textarea.addEventListener("keypress",function (e) {
         if (e.keyCode == 13) {
            var li = document.createElement("li");
@@ -48,5 +65,5 @@ $(document).ready(function(){
     			$("ul").append(li);
     		}
     		
-        });
+        });*/
 });

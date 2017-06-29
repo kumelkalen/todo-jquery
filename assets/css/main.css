@@ -18,4 +18,20 @@ section{
 	width: 100%;
 }
 
+.waves-effect{
+	top:-60px;
+	left:20px;
+}
+#textarea{
+	width:70%;
+}	
 
+li{
+	background-color: white;
+	color: #00ace6;	
+}
+
+i.x{
+	position: relative;
+	left: 50%;	
+}
